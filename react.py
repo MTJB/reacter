@@ -17,11 +17,9 @@ def main():
     with open('emoji_groups.json', 'r') as f:
         groups = json.load(f)
 
-    channel, timestamp = parse_link(args.link)
-
-    client = WebClient(token=get_from_env('SLACK_API_TOKEN'))
-
     if args.group in groups:
+        client = WebClient(token=get_from_env('SLACK_API_TOKEN'))
+        channel, timestamp = parse_link(args.link)
         for emoji in groups[args.group]:
             try:
                 client.reactions_add(
