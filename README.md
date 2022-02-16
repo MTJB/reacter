@@ -1,4 +1,4 @@
-# Slack React
+# Reacter
 
 <img src="./resources/react.png" width="300" height="250">
 
