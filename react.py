@@ -53,7 +53,7 @@ def parse_link(link):
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='''
-    TODO
+    React to messages on Slack
     ''')
 
     parser.add_argument('--group', type=str, dest='group',
